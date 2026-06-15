@@ -6,9 +6,13 @@ import "./App.css";
 function App() {
   return (
     <BrowserRouter>
-      <nav style={{ display: "flex", gap: "1rem", padding: "1rem", borderBottom: "1px solid #ddd" }}>
-        <NavLink to="/">Dashboard</NavLink>
-        <NavLink to="/chat">Chat</NavLink>
+      <nav className="navbar">
+        <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "")}>
+          Dashboard
+        </NavLink>
+        <NavLink to="/chat" className={({ isActive }) => (isActive ? "active" : "")}>
+          Chat
+        </NavLink>
       </nav>
 
       <div style={{ padding: "1.5rem" }}>
